@@ -38,7 +38,7 @@ body .keyboard .keyboard__button {
 body .keyboard .keyboard__button--blue {
   background-color: #0D00A4;
   font-size: 2rem;
-  border: 1px solid #04052E;
+  border: 1px solid white;
 }
 body .keyboard .screen {
   font-weight: 500;
@@ -57,7 +57,7 @@ body .keyboard .zero {
 }
 body .keyboard .equals {
   grid-column: -5/-1;
-  background-color: #990033;
+  background-color: #0D00A4;
 }
 body .keyboard .red {
   background-color: red;

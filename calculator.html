@@ -1,70 +1,67 @@
 <!DOCTYPE html>
 <html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&display=swap"
+            rel="stylesheet"
+        />
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&family=Roboto+Condensed&display=swap"
+            rel="stylesheet"
+        />
+        <title>Calculator</title>
+        <link rel="stylesheet" href="calculator.css" />
+    </head>
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&family=Roboto+Condensed&display=swap"
-        rel="stylesheet">
-    <title>Calculator</title>
-    <link rel="stylesheet" href="calculator.css">
-</head>
+    <body>
+        <h1 class="calculator-heading">JavaScript Calculator</h1>
 
-<body>
+        <div class="keyboard">
+            <div class="screen"></div>
+            <div class="keyboard__button maximum-red">C</div>
+            <button class="keyboard__button">+/-</button>
+            <button class="keyboard__button">%</button>
+            <button
+                class="keyboard__button keyboard__button--blue plus operator"
+            >
+                ÷
+            </button>
+            <button class="keyboard__button number" value="7">7</button>
+            <button class="keyboard__button number" value="8">8</button>
+            <button class="keyboard__button number" value="9">9</button>
+            <button class="keyboard__button keyboard__button--blue operator">
+                x
+            </button>
+            <button class="keyboard__button number" value="4">4</button>
+            <button class="keyboard__button number" value="5">5</button>
+            <button class="keyboard__button number" value="6">6</button>
+            <button class="keyboard__button keyboard__button--blue operator">
+                -
+            </button>
+            <button class="keyboard__button number one" value="1">1</button>
+            <button class="keyboard__button number" value="2">2</button>
+            <button class="keyboard__button number" value="3">3</button>
+            <button class="keyboard__button keyboard__button--blue operator">
+                +
+            </button>
+            <button class="keyboard__button number zero" value="0">0</button>
+            <button class="keyboard__button del">DEL</button>
+            <button class="keyboard__button keyboard__button--blue dot">
+                .
+            </button>
+            <button class="keyboard__button equals keyboard__button--blue">
+                =
+            </button>
+        </div>
 
-    <h1 class="calculator-heading">JavaScript Calculator</h1>
-
-
-
-
-    <div class="keyboard">
-        <div class="screen"></div>
-        <div class="keyboard__button maximum-red">C</div>
-        <button class="keyboard__button">+/-</button>
-        <button class="keyboard__button">%</button>
-        <button class="keyboard__button keyboard__button--blue plus operator">÷</button>
-        <button class="keyboard__button seven" value="7">7</button>
-        <button class="keyboard__button" value="8">8</button>
-        <button class="keyboard__button" value="9">9</button>
-        <button class="keyboard__button keyboard__button--blue operator">x</button>
-        <button class="keyboard__button" value="4">4</button>
-        <button class="keyboard__button" value="5">5</button>
-        <button class="keyboard__button" value="6">6</button>
-        <button class="keyboard__button keyboard__button--blue operator">-</button>
-        <button class="keyboard__button one" value="1">1</button>
-        <button class="keyboard__button" value="2">2</button>
-        <button class="keyboard__button" value="3">3</button>
-        <button class="keyboard__button keyboard__button--blue operator">+</button>
-        <button class="keyboard__button zero" value="0">0</button>
-        <button class="keyboard__button del">DEL</button>
-        <button class="keyboard__button keyboard__button--blue dot">.</button>
-        <button class="keyboard__button equals keyboard__button--blue">=</button>
-    </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    <script src="calc.js"></script>
-</body>
-
+        <script src="calc.js"></script>
+    </body>
 </html>
