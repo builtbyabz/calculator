@@ -14,15 +14,16 @@ body {
   height: 100vh;
 }
 body .calculator-heading {
-  margin-bottom: 10px;
+  margin-bottom: 30px;
   font-size: 3rem;
 }
 body .keyboard {
-  background-color: #02010A;
   display: grid;
   grid-template-columns: repeat(4, 70px);
   /*grid-template-rows: repeat(7, 100px);*/
   grid-auto-rows: 70px;
+  border-bottom-left-radius: 30px;
+  border-bottom-right-radius: 30px;
 }
 body .keyboard .keyboard__button {
   cursor: pointer;
@@ -36,19 +37,18 @@ body .keyboard .keyboard__button {
   border: none;
 }
 body .keyboard .keyboard__button--blue {
-  background-color: #0D00A4;
-  font-size: 2rem;
-  border: 1px solid white;
+  color: #8693AB;
+  font-size: 2.3rem;
 }
 body .keyboard .screen {
   font-weight: 500;
   font-size: 3rem;
   padding: 10px;
-  background-color: #02010A;
+  background-color: whitesmoke;
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  color: white;
+  color: black;
   grid-column: 1/5;
 }
 body .keyboard .zero {
@@ -57,7 +57,10 @@ body .keyboard .zero {
 }
 body .keyboard .equals {
   grid-column: -5/-1;
-  background-color: #0D00A4;
+  color: white;
+  background-color: #8693AB;
+  border-bottom-left-radius: 30px;
+  border-bottom-right-radius: 30px;
 }
 body .keyboard .red {
   background-color: red;
@@ -66,7 +69,6 @@ body .keyboard .red {
 body .keyboard .maximum-red {
   background-color: #990033;
 }
-
 @media screen and (min-width: 1000px) {
   body {
     font-size: 18px;
