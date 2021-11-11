@@ -58,7 +58,6 @@ for (i = 0; i < operators.length; i++) {
 
 const calculateNumbers = (first, second) => {
 
-
     if (operator === "+") {
         console.log(first);
         console.log(second);
