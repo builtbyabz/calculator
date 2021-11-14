@@ -17,15 +17,9 @@ body {
     height: 100vh;
     background-color: #000814;
 
-   
-   
-
     .calculator-heading {
         margin-bottom: 30px;
         font-size: 3rem;
-     
-     
-
     }
 
     .keyboard {
@@ -39,8 +33,6 @@ body {
         background-color: #001D3D;
         padding: 20px;
     
-    
-
         .keyboard__button {
             cursor: pointer;
             //background-color: #04052E;
@@ -53,20 +45,12 @@ body {
             color: white;
             border: none;
 
-
             &:hover {
-                filter: brightness(140%);
-               
-                
+                filter: brightness(140%);   
             }
 
             &--blue {
-                //color:  #8693AB;
                 color: #FFD60A;
-                //background-color: #0D00A4;
-                //font-size: 2.3rem;
-            
-             
                 
             }
         }
@@ -83,12 +67,10 @@ body {
             align-items: center;
             color: black;
             grid-column: 1 / 5;
-
         }
 
         .zero {
-            grid-column: -5 / -3;
-          
+            grid-column: -5 / -3;    
         }
        
 
@@ -97,34 +79,14 @@ body {
             color: white;
             //background-color: #8693AB;
             border-radius: 50%;
-            background-color: #FFC300;
-          
+            background-color: #FFC300;  
         }
 
         .red {
-
             background-color: red;
             opacity: none;
         }
-
-        .maximum-red {
-            //background-color: #990033;
-            //color: #990033;
-         
-      
-
-
-        }
-
-        .devide {
-     
-
-        }
     }
-
-
-
-
 
 }
 
@@ -134,18 +96,12 @@ body {
     body {    
         font-size: 18px;
         
-
-
         .keyboard {
             display: grid;
             grid-template-columns: repeat(4, 100px);
             grid-auto-rows: 100px;
         }
     }
-
-
-
-
 
 
 }
