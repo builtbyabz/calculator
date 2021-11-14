@@ -15,6 +15,7 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
+    background-color: #000814;
 
    
    
@@ -35,16 +36,15 @@ body {
         grid-auto-rows: 70px;
         border-bottom-left-radius: 30px;
         border-bottom-right-radius: 30px;
-        box-shadow: 1px 1px 15px 5px #333;
-        
- 
-   
-     
-     
+        background-color: #001D3D;
+        padding: 20px;
+    
+    
 
         .keyboard__button {
             cursor: pointer;
-            background-color: #04052E;
+            //background-color: #04052E;
+            background-color: #001D3D;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -61,15 +61,17 @@ body {
             }
 
             &--blue {
-                color:  #8693AB;
+                //color:  #8693AB;
+                color: #FFD60A;
                 //background-color: #0D00A4;
-                font-size: 2.3rem;
+                //font-size: 2.3rem;
             
-                //border: 1px solid #04052E;
+             
                 
             }
         }
 
+        
 
         .screen {
             font-weight: 500;
@@ -81,24 +83,22 @@ body {
             align-items: center;
             color: black;
             grid-column: 1 / 5;
-    
 
         }
 
         .zero {
             grid-column: -5 / -3;
-            border: 1px solid #04052E;
+          
         }
        
 
         .equals {
-            grid-column: -5 / -1;
+            grid-column: -2 / -1;
             color: white;
-            //background-color: #0D00A4;
-            background-color: #8693AB;
-            border-bottom-left-radius: 30px;
-            border-bottom-right-radius: 30px;
-            
+            //background-color: #8693AB;
+            border-radius: 50%;
+            background-color: #FFC300;
+          
         }
 
         .red {
@@ -108,7 +108,8 @@ body {
         }
 
         .maximum-red {
-            background-color: #990033;
+            //background-color: #990033;
+            //color: #990033;
          
       
 

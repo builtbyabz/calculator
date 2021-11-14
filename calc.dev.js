@@ -1,25 +1,17 @@
 "use strict";
 
-var one = document.querySelector(".one");
-
-var changeColor = function changeColor() {
-  one.classList.add("red");
-};
-
-one.addEventListener("click", changeColor); //This displays the number 7 onto the screen
-//const number = document.querySelector(".seven");
-//const output = document.querySelector(".screen")
-//const displayNumber = () => {
-//output.innerHTML = number.value;
-//}
-//number.addEventListener("click", displayNumber);
-//Displays numbers on the screen
-
+// const one = document.querySelector(".one");
+// const changeColor = () => {
+//     one.classList.add("red");
+// };
+// one.addEventListener("click", changeColor);
+//Global Variables
 var numbers = document.querySelectorAll(".number");
 var output = document.querySelector(".screen");
 var operators = document.querySelectorAll(".operator");
 var equalusButton = document.querySelector(".equals");
-console.log(operators);
+var clear = document.querySelector(".maximum-red"); //Global Variables
+
 var firstNumber = "";
 var secondNumber = "";
 var operator = ""; //added empty array to 
@@ -30,7 +22,6 @@ for (i = 0; i < numbers.length; i++) {
   numbers[i].addEventListener("click", function (event) {
     firstNumber = event.target.value;
     output.innerHTML += firstNumber;
-    console.log(firstNumber);
   });
 }
 
@@ -38,20 +29,15 @@ for (i = 0; i < operators.length; i++) {
   operators[i].addEventListener("click", function (event) {
     firstNumber = output.innerHTML;
     numbers1.push(firstNumber);
-    operator = event.target.innerText; //secondNumber = firstNumber;
-    //firstNumber = "";
-
-    console.log(operator);
+    operator = event.target.innerText;
     output.innerHTML += operator;
-    console.log(numbers1);
-    output.innerHTML = "";
+    output.innerHTML = ""; //output.innerHTML = operator;
   });
-}
+} //Function to calculate numbers.
+
 
 var calculateNumbers = function calculateNumbers(first, second) {
   if (operator === "+") {
-    console.log(first);
-    console.log(second);
     return parseInt(first) + parseInt(second);
   } else if (operator === "-") {
     return parseInt(first) - parseInt(second);
@@ -61,19 +47,17 @@ var calculateNumbers = function calculateNumbers(first, second) {
     return parseInt(first) * parseInt(second);
   }
 };
+/*Calls the functions to calculate numbers when the user clicks on the equals button.*/
+
 
 equalusButton.addEventListener("click", function () {
   secondNumber = output.innerHTML;
   numbers1.push(secondNumber);
-  console.log(numbers1);
-  output.innerHTML = calculateNumbers(numbers1[0], numbers1[1]); //secondNumber = numbers1[1]
-  //console.log(secondNumber)
-  //console.log(calculateNumbers(numbers1[0], numbers1[1]))
-  //console.log(calculateNumbers(firstNumber, secondNumber))
-  // console.log(firstNumber, secondNumber, operator);
+  output.innerHTML = calculateNumbers(numbers1[0], numbers1[1]);
 });
-/* 1. Get the elements I neeed from the DOM.
-   2. Store the first number after selecting operand.
+/*Clears the numbers1 array and sets the output screen to nothing when you click on the C button*/
 
-
-*/
+clear.addEventListener("click", function () {
+  numbers1 = [];
+  output.innerHTML = "";
+});
