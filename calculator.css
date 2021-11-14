@@ -5,8 +5,11 @@
   font-family: "Roboto Condensed", sans-serif;
 }
 
-body {
+html {
   font-size: 12px;
+}
+
+body {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -14,9 +17,10 @@ body {
   height: 100vh;
   background-color: #000814;
 }
-body .calculator-heading {
+body .calc-title {
   margin-bottom: 30px;
   font-size: 3rem;
+  color: whitesmoke;
 }
 body .keyboard {
   display: grid;
@@ -36,7 +40,7 @@ body .keyboard .keyboard__button {
   align-items: center;
   font-size: 1.5rem;
   padding: 20px;
-  color: white;
+  color: whitesmoke;
   border: none;
 }
 body .keyboard .keyboard__button:hover {
@@ -61,7 +65,7 @@ body .keyboard .zero {
 }
 body .keyboard .equals {
   grid-column: -2/-1;
-  color: white;
+  color: #000814;
   border-radius: 50%;
   background-color: #FFC300;
 }
@@ -70,10 +74,12 @@ body .keyboard .red {
   opacity: none;
 }
 
-@media screen and (min-width: 1000px) {
-  body {
+/*DESKTOP screens */
+@media screen and (min-width: 900px) {
+  html {
     font-size: 18px;
   }
+
   body .keyboard {
     display: grid;
     grid-template-columns: repeat(4, 100px);
