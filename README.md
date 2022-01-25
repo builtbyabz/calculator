@@ -1,17 +1,22 @@
-# calculator
-Creator - Abdul Oketunde
+# Simople Calculator
+## Creator - Abdul Oketunde
 
-Simple Calculator is a calculator built with HTML5, SCSS and vanilla Javascript. I can perform basic functionalities such as addition, subtraction, multiplication and division.
+## Overview 
+Simple Calculator is a calculator built with HTML5, SCSS and vanilla Javascript. It can perform basic functionalities such as addition, subtraction, multiplication and division.
 
-How it works:
+[Check out the Live Demo!](https://ab-96.github.io/Rock-Paper-Scissors/)
+![Simple Calculator](assets/images/calc.png)
+
+## How it works
 
 This calculator works by adding event listeners to each button. I created 4 global variables which are the basis for this program. These are: 
 
+```javascript 
 firstNumber = "";
 let secondNumber = "";
 let operator = "";
 let numbers1 = []
-
+```
 Once a user clicks on a number, it will display the number onto the output screen. As soon as the user clicks on an operator: + - / * -- it will push the firstNumber into the Numbers1 array. 
 
 The output also gets cleared so that when the user enters the second number after the operator has been selected, it can then be pushed into index[1] of the Numbers1 array. This is done once the user clicks on the equals button, the secondnNumber will be stored from the current output. 
