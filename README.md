@@ -1,4 +1,4 @@
-# Simople Calculator
+# Simple Calculator
 ## Creator - Abdul Oketunde
 
 ## Overview 
