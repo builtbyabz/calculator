@@ -4,7 +4,7 @@
 ## Overview 
 Simple Calculator is a calculator built with HTML5, SCSS and vanilla Javascript. It can perform basic functionalities such as addition, subtraction, multiplication and division.
 
-[Check out the Live Demo!](https://ab-96.github.io/Rock-Paper-Scissors/)
+[Check out the Live Demo!](https://ab-96.github.io/calculator/)
 ![Simple Calculator](assets/images/calc.png)
 
 ## How it works
