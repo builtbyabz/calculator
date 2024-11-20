@@ -14,27 +14,44 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 100vh;
-  background-image: linear-gradient(#003566, #ffd60a);
+  min-height: 100vh;
+  background-image: linear-gradient(135deg, #003566, #001D3D, #ffd60a);
+  background-size: 200% 200%;
+  animation: gradientBG 15s ease infinite;
+  padding: 20px;
 }
-body .calc-title {
+
+@keyframes gradientBG {
+  0% { background-position: 0% 50% }
+  50% { background-position: 100% 50% }
+  100% { background-position: 0% 50% }
+}
+
+.calc-title {
   margin-bottom: 30px;
   font-size: 3rem;
   color: whitesmoke;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+  letter-spacing: 2px;
 }
-body .keyboard {
+
+.keyboard {
   display: grid;
   grid-template-columns: repeat(4, 70px);
-  /*grid-template-rows: repeat(7, 100px);*/
   grid-auto-rows: 70px;
-  border-bottom-left-radius: 30px;
-  border-bottom-right-radius: 30px;
-  background-color: #001D3D;
-  padding: 20px;
+  border-radius: 30px;
+  background-color: rgba(0, 29, 61, 0.95);
+  padding: 25px;
+  box-shadow: 
+    0 8px 25px rgba(0, 0, 0, 0.3),
+    0 0 0 1px rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  gap: 12px;
 }
-body .keyboard .keyboard__button {
+
+.keyboard__button {
   cursor: pointer;
-  background-color: #001D3D;
+  background-color: rgba(255, 255, 255, 0.05);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -42,47 +59,113 @@ body .keyboard .keyboard__button {
   padding: 20px;
   color: whitesmoke;
   border: none;
+  transition: all 0.2s ease;
+  user-select: none;
+  border-radius: 15px;
+  backdrop-filter: blur(5px);
 }
-body .keyboard .keyboard__button:hover {
+
+.keyboard__button:hover {
   filter: brightness(140%);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
 }
-body .keyboard .keyboard__button--blue {
+
+.keyboard__button:active {
+  transform: translateY(0) scale(0.95);
+}
+
+.keyboard__button--blue {
   color: #FFD60A;
+  background-color: rgba(255, 214, 10, 0.15);
 }
-body .keyboard .screen {
+
+.screen {
   font-weight: 500;
-  font-size: 3.5rem;
-  padding: 10px;
-  background-color: whitesmoke;
+  font-size: 2.5rem;
+  padding: 20px;
+  background-color: rgba(245, 245, 245, 0.95);
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  color: black;
+  color: #001D3D;
   grid-column: 1/5;
+  overflow: hidden;
+  white-space: normal;
+  border-radius: 20px;
+  margin-bottom: 10px;
+  box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  min-height: 60px;
+  word-wrap: break-word;
 }
-body .keyboard .zero {
+
+.zero {
   grid-column: -5/-3;
 }
-body .keyboard .equals {
+
+.equals {
   grid-column: -2/-1;
   color: #000814;
-  border-radius: 50%;
-  background-color: #FFC300;
-}
-body .keyboard .red {
-  background-color: red;
-  opacity: none;
+  border-radius: 15px;
+  background: linear-gradient(145deg, #FFC300, #FFD60A);
+  box-shadow: 0 4px 15px rgba(255, 214, 10, 0.3);
+  transition: all 0.2s ease;
 }
 
-/*DESKTOP screens */
-@media screen and (min-width: 900px) {
+.equals:hover {
+  background: linear-gradient(145deg, #FFD60A, #FFC300);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(255, 214, 10, 0.4);
+}
+
+.red {
+  background: linear-gradient(145deg, #ff3333, #ff0000);
+  box-shadow: 0 4px 15px rgba(255, 0, 0, 0.2);
+}
+
+/* Tablet screens */
+@media screen and (min-width: 768px) and (max-width: 899px) {
   html {
-    font-size: 18px;
+    font-size: 16px;
   }
 
-  body .keyboard {
-    display: grid;
-    grid-template-columns: repeat(4, 100px);
-    grid-auto-rows: 100px;
+  .keyboard {
+    grid-template-columns: repeat(4, 85px);
+    grid-auto-rows: 85px;
+    gap: 15px;
+  }
+}
+
+/* Desktop screens */
+@media screen and (min-width: 900px) {
+  html {
+    font-size: 16px;
+  }
+
+  .keyboard {
+    grid-template-columns: repeat(4, 80px);
+    grid-auto-rows: 80px;
+    gap: 12px;
+    padding: 20px;
+  }
+
+  .screen {
+    font-size: 2.2rem;
+    padding: 15px;
+  }
+}
+
+/* Small mobile screens */
+@media screen and (max-width: 320px) {
+  html {
+    font-size: 10px;
+  }
+
+  .keyboard {
+    grid-template-columns: repeat(4, 60px);
+    grid-auto-rows: 60px;
+    padding: 15px;
+    gap: 10px;
   }
 }
